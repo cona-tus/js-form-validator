@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="icon" type="image/ico" href="./asset/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./src/theme.js" defer></script>
+    <script src="./src/script.js" defer></script>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <header>
+            <h1 id="title" class="title"></h1>
+            <!-- Theme Mode Switch -->
+            <div class="theme-switch-wrapper">
+                <span id="toggle-icon" class="toggle-icon">
+                    <i class="fas fa-sun"></i>
+                </span>
+                <label class="theme-switch">
+                    <input type="checkbox">
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </header>
+        <!-- Form -->
+        <form id="form">
+            <div class="form-group">
+                <input id="name" type="text" name="name" placeholder="User Name (Min. 2 characters)" required
+                    minlength="2" maxlength="20" />
+                <label class="label" for="name">User Name</label>
+            </div>
+            <div class="form-group">
+                <input id="phone" type="tel" name="phone" required placeholder="000-0000-0000"
+                    pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" />
+                <label class="label" for="phone">Phone Number</label>
+            </div>
+            <div class="form-group">
+                <input id="email" type="email" name="email" required placeholder="email@address.com"
+                    pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])" />
+                <label class="label" for="email">Email Address</label>
+            </div>
+            <div class="form-group">
+                <input id="website" type="url" name="url" required placeholder="https//website.com" />
+                <label class="label" for="website">Website URL</label>
+            </div>
+            <div class="form-group">
+                <input id="password1" type="password" required placeholder="Create Password (Min. 8 characters)"
+                    pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})"
+                    title="Please include at least 1 uppercase character, 1 lowercase character, 1 special character, and 1 number." />
+                <label class="label" for="password1">Password</label>
+            </div>
+            <div class="form-group">
+                <input id="password2" type="password" name="password" required placeholder="Confirm Password"
+                    pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})"
+                    title="Please match password you entered." />
+                <label class="label" for="password2">Confirm Password</label>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- User Info -->
+        <div id="user-container" class="user-container"></div>
+    </div>
+</body>
+
+</html>
