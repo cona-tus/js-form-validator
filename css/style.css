@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Unbounded:wght@700&display=swap');
+
+@import './variable.css';
+@import './base.css';
+@import './theme.css';
+@import './form.css';
+@import './user.css';
+
+.container {
+  width: 500px;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  border-radius: 2rem;
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  color: var(--font-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: 'Unbounded', cursive;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

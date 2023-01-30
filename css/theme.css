@@ -1,0 +1,58 @@
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch {
+  width: 45px;
+  height: 26px;
+  display: inline-block;
+  position: relative;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-alt-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.slider::before {
+  width: 20px;
+  height: 20px;
+  content: '';
+  position: absolute;
+  left: 4px;
+  bottom: 3px;
+  background: var(--bg-color);
+  transition: all 0.3s ease-in-out;
+}
+
+input:checked + .slider {
+  background: var(--font-color);
+}
+
+input:checked + .slider::before {
+  transform: translateX(18px);
+}
+
+.slider.round {
+  border-radius: 1rem;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.fas {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
