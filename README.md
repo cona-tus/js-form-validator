@@ -41,11 +41,11 @@
 
 ## 3. Main Features
 
-1. [유효성 검사]()
-2. [로컬 스토리지에 데이터 저장]()
-3. [폼 초기화]()
-4. [로컬 스토리지에서 데이터 가져오기]()
-5. [등록된 사용자 정보 표시]()
+1. [유효성 검사](#3-1-validation-check)
+2. [로컬 스토리지에 데이터 저장](#3-2-store-user-in-the-local-storage)
+3. [폼 초기화](#3-3-reset-form-data)
+4. [로컬 스토리지에서 데이터 가져오기](#3-4-get-user-data-from-local-storage)
+5. [등록된 사용자 정보 표시](#3-5-populate-data-on-dom)
 
 <br/>
 
